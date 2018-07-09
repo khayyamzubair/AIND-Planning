@@ -1,4 +1,5 @@
 import argparse
+import sys
 from timeit import default_timer as timer
 from aimacode.search import InstrumentedProblem
 from aimacode.search import (breadth_first_search, astar_search,
@@ -7,6 +8,8 @@ from aimacode.search import (breadth_first_search, astar_search,
     recursive_best_first_search)
 from my_air_cargo_problems import air_cargo_p1, air_cargo_p2, air_cargo_p3
 
+
+sys.stdout = open('searchresult', 'w')
 PROBLEM_CHOICE_MSG = """
 Select from the following list of air cargo problems. You may choose more than
 one by entering multiple selections separated by spaces.
